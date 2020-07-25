@@ -45,6 +45,7 @@ jobs:
           memory: 256M
           random-route: true
         EOF
+        cat manifest-ibm.yml
         chmod +x *
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push
 #     - name: Restart IBM Cloud
