@@ -40,7 +40,7 @@ jobs:
         rm -rf v2ray-cloudfoundry
         git clone https://github.com/a132395/v2ray-cloudfoundry.git
         cd v2ray-cloudfoundry
-        cat > manifest-ibm.yml << EOF
+        cat > manifest.yml << EOF
         applications:
         - path: .
          name: "$IBM_APP_NAME"
