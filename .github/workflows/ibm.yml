@@ -36,7 +36,7 @@ jobs:
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
-        ls -a
+        cd v2ray-cloudfoundry
         rm -rf manifest-ibm.yml
         cat > manifest-ibm.yml << EOF
         applications:
