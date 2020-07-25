@@ -38,6 +38,8 @@ jobs:
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
         pwd
+        rm -rf v2ray-cloudfoundry
+        git clone https://github.com/badafans/v2ray-cloudfoundry.git
         cd v2ray-cloudfoundry
         pwd
         ls -a
