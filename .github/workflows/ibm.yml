@@ -39,6 +39,8 @@ jobs:
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
         cd v2ray-cloudfoundry
         sed -i "s/GetStartedGo/${{ secrets.IBM_APP_NAME }}/g"  manifest-ibm.yml
+        cat manifest-ibm.yml
+        chmod +x *
 #        rm -rf manifest-ibm.yml
 #        cat > manifest-ibm.yml << EOF
 #        applications:
@@ -47,8 +49,6 @@ jobs:
 #          memory: 256M
 #          random-route: true
 #        EOF
-        cat manifest-ibm.yml
-        chmod +x *
 #        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push
 #     - name: Restart IBM Cloud
 #       env:
