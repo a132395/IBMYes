@@ -42,7 +42,7 @@ jobs:
         cat > manifest-ibm.yml << EOF
         applications:
         - path: .
-          name: "IBM_APP_NAME"
+          name: "$IBM_APP_NAME"
           memory: 256M
           random-route: true
         EOF
