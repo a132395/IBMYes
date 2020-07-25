@@ -35,9 +35,20 @@ jobs:
         ./IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         ./IBM_Cloud_CLI/ibmcloud target --cf
         ./IBM_Cloud_CLI/ibmcloud cf install
-    - name: Restart IBM Cloud
-      env:
-        IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
-      run: |
-        ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
+        git clone https://github.com/badafans/v2ray-cloudfoundry.git
+        cd v2ray-cloudfoundry/v2ray
+        cat > manifest-ibm.yml << EOF
+        applications:
+        - path: .
+          name: ${{ secrets.IBM_APP_NAME }}
+          memory: 256M
+          random-route: true
+        EOF
+        chmod +x *
+        ./IBM_Cloud_CLI/ibmcloud cf push
+#     - name: Restart IBM Cloud
+#       env:
+#         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
+#       run: |
+#         ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
  
