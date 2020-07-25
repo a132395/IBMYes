@@ -34,15 +34,15 @@ jobs:
         RESOURSE_ID: ${{ secrets.RESOURSE_ID }}
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
       run: |
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
         rm -rf v2ray-cloudfoundry
         git clone https://github.com/a132395/v2ray-cloudfoundry.git
+        chmod +x *
         cd v2ray-cloudfoundry
         sed -i "s/GetStartedGo/${{ secrets.IBM_APP_NAME }}/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
         sed -i "s/128/256/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
-        chmod +x *
+        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
+        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
+        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push
 #        rm -rf manifest-ibm.yml
 #        cat > manifest-ibm.yml << EOF
