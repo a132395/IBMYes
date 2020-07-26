@@ -39,11 +39,12 @@ jobs:
         chmod +x /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/v2ray/*
         cd v2ray-cloudfoundry
         sed -i "s/GetStartedGo/${{ secrets.IBM_APP_NAME }}/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
-        sed -i "s/128/256/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push
+        # pwd
+#       sed -i "s/128/256/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
+#       /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
+#       /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
+#       /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
+#       /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push
 #        rm -rf manifest-ibm.yml
 #        cat > manifest-ibm.yml << EOF
 #        applications:
