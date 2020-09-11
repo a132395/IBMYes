@@ -44,9 +44,11 @@ jobs:
         #cat /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/v2ray/config.json
         cd /home/runner/work/IBMYes/IBMYes/
         mv /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/ /home/runner/work/IBMYes/IBMYes/zai/
+        ls
         #mv /home/runner/work/IBMYes/IBMYes/zai/v2ray/ /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/zai/
         #mv /home/runner/work/IBMYes/IBMYes/zai/zai/v2ray /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/zai/zai
         cd /home/runner/work/IBMYes/IBMYes/zai/
+        ls
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install -v 6.51.0
