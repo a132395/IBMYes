@@ -46,7 +46,7 @@ jobs:
         mv /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/ /home/runner/work/IBMYes/IBMYes/ruby/
         ls
         mv /home/runner/work/IBMYes/IBMYes/ruby/v2ray/ /home/runner/work/IBMYes/IBMYes/ruby/ruby/
-        mv /home/runner/work/IBMYes/IBMYes/ruby/ruby/ruby /home/runner/work/IBMYes/IBMYes/ruby/ruby/ruby
+        mv /home/runner/work/IBMYes/IBMYes/ruby/ruby/v2ray /home/runner/work/IBMYes/IBMYes/ruby/ruby/ruby
         cd /home/runner/work/IBMYes/IBMYes/ruby/
         ls
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
