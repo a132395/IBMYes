@@ -46,7 +46,6 @@ jobs:
         mv /home/runner/work/IBMYes/IBMYes/ruby/v2ray/ /home/runner/work/IBMYes/IBMYes/ruby/ruby/
         mv /home/runner/work/IBMYes/IBMYes/ruby/ruby/v2ray /home/runner/work/IBMYes/IBMYes/ruby/ruby/ruby
         cd /home/runner/work/IBMYes/IBMYes/ruby/
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -r eu-gb
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install -v 6.51.0
