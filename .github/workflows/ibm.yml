@@ -32,7 +32,7 @@ jobs:
       env:
         RESOURSE_ID: ${{ secrets.RESOURSE_ID }}
       run: |
-        rm -rf zai
+        rm -rf ruby
         rm -rf v2ray-cloudfoundry
         git clone https://github.com/a132395/v2ray-cloudfoundry.git
         chmod +x /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/v2ray/*
@@ -43,11 +43,11 @@ jobs:
         sed -i "s/128/256/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
         #cat /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/v2ray/config.json
         cd /home/runner/work/IBMYes/IBMYes/
-        mv /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/ /home/runner/work/IBMYes/IBMYes/zai/
+        mv /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/ /home/runner/work/IBMYes/IBMYes/ruby/
         ls
-        mv /home/runner/work/IBMYes/IBMYes/zai/v2ray/ /home/runner/work/IBMYes/IBMYes/zai/zai/
-        mv /home/runner/work/IBMYes/IBMYes/zai/zai/v2ray /home/runner/work/IBMYes/IBMYes/zai/zai/zai
-        cd /home/runner/work/IBMYes/IBMYes/zai/
+        mv /home/runner/work/IBMYes/IBMYes/ruby/v2ray/ /home/runner/work/IBMYes/IBMYes/ruby/ruby/
+        mv /home/runner/work/IBMYes/IBMYes/ruby/ruby/ruby /home/runner/work/IBMYes/IBMYes/ruby/ruby/ruby
+        cd /home/runner/work/IBMYes/IBMYes/ruby/
         ls
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
